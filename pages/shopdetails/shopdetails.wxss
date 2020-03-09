@@ -1,0 +1,57 @@
+/* pages/shopdetails/shopdetails.wxss */
+
+.shop {
+  padding: 1rem;
+  background: #fff;
+}
+
+.shop image {
+  margin: 0 auto;
+  width: 100%;
+  height: 20rem;
+}
+
+.shopname {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.shopprice {
+  font-size: 0.9rem;
+  color: red;
+  margin-top: 0.3rem;
+}
+
+.fot {
+  height: 3rem;
+  position: fixed;
+  display: flex;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: thin #ccc solid;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.box {
+  width: 30px;
+  border: solid 1px #ddd;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 2px;
+  font-size: 1.2rem;
+}
+
+.but {
+  height: 2rem;
+  background: red;
+  border-radius: 5px;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 1rem;
+}

@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/shop/shop",
+    "pages/user/user",
+    "pages/iwenblog/iwenblog",
+    "pages/shopdetails/shopdetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e7e7e7",
+    "navigationBarTitleText": "无人点餐",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#e7e7e7",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "assets/images/icon-home.png",
+      "selectedIconPath": "assets/images/icon-home1.png"
+    },
+    {
+      "pagePath": "pages/shop/shop",
+      "text": "商品",
+      "iconPath": "assets/images/icon-shop.png",
+      "selectedIconPath": "assets/images/icon-shop1.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "assets/images/icon-user.png",
+      "selectedIconPath": "assets/images/icon-user1.png"
+    }
+    ]
+  }
+}

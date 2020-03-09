@@ -1,0 +1,19 @@
+<!--home.wxml-->
+
+
+<view>
+  <view wx:for="{{goodsList}}" wx:for-item="i" wx:key="index">
+    <view class="title">{{i.title}}</view>
+    <view class="item">
+      <view class="ul">
+        <view class="li" wx:for="{{i.list}}" wx:for-item="j" wx:key="index">
+          <view class="inner" bindtap="gotoDetails" data-id="{{j._id}}">
+            <image src="{{j.img_url}}"></image>
+            <view class="goodsname">{{j.title}}</view>
+            <view class="goodsprice">￥{{j.price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

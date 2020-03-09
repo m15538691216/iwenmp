@@ -1,0 +1,21 @@
+<!--pages/shopdetails/shopdetails.wxml-->
+<view>
+  <view style="background: #ccc;">
+    <view class="shop">
+      <image src="{{list.img_url}}"></image>
+      <view class="shopname">{{list.title}}</view>
+      <view class="shopprice">￥{{list.price}}/份</view>
+    </view>
+    <view class="shop" style="margin-top:1rem;">
+      <view style="font-weight: bolder;font-size:0.9rem;margin-bottom: 0.3rem;">食品介绍</view>
+      <rich-text nodes="{{list.content}}" style="font-size:0.8rem;"></rich-text>
+    </view>
+  </view>
+  <view class="fot">
+    <view>数量：</view>
+    <view class="box" bindtap="bandjian">-</view>
+    <view class="box" style="font-size:0.8rem;">{{num}}</view>
+    <view class="box" bindtap="bandjia">+</view>
+    <view class="but" bindtap="bandadd" data-_id="{{list._id}}">加入购物车</view>
+  </view>
+</view>

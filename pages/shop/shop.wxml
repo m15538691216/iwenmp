@@ -1,0 +1,44 @@
+<!--pages/shop/shop.wxml-->
+<view >
+  <scroll-view scroll-y="true" style="height: {{scroll_height}}rpx;" scroll-top="0">
+    <view class="list" wx:for="{{list}}" wx:for-item="h" wx:key="index">
+      <checkbox-group bindchange="checkboxChange" data-index="{{index}}">
+        <label class="checkbox">
+          <checkbox value="{{index}}" checked="{{h.checked}}" class="check" />
+        </label>
+      </checkbox-group>
+      <view class="item">
+        <image src="{{h.img_url}}"></image>
+        <view class="title">
+          <text style="font-weight: normal;font-size: 0.9rem;">{{h.title}}</text>
+          <view style="display:flex;margin-top:0.5rem;">
+            <text style="font-size:0.9rem;color:red;">￥{{h.price}}/份</text>
+            <text style="font-size:20rpx;color:red;margin-left:1.5rem;margin-top:10rpx;">库存：{{h.num}}</text>
+          </view>
+          <view class="count">
+            <view style="display:flex;">
+              <view class="bordleft" bindtap="bandjian" data-index="{{index}}">-</view>
+              <view class="cou">{{h.shopnum}}</view>
+              <view class="bordright" bindtap="bandjia" data-index="{{index}}">+</view>
+            </view>
+            <view style="margin-left: 2rem;color: red;">￥{{h.price*h.shopnum}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="bot" wx:if="{{list != ''}}">
+    <view style="display:flex;align-items: center;margin-left: 6%;">
+      <checkbox-group bindchange="allcheckboxChange">
+        <label class="checkbox">
+          <checkbox value="全选" checked="{{allchexked}}" class="check" />
+        </label>
+      </checkbox-group>
+      <view style="font-size:0.8rem;">￥{{allprice}}</view>
+      <view class="del" wx:if="{{allprice != 0}}" bindtap="bandDel">删除</view>
+    </view>
+    <view class="pay" bindtap="bandPay">
+      立即购买
+    </view>
+  </view>
+</view>

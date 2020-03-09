@@ -1,0 +1,39 @@
+/**home.wxss**/
+
+.title {
+  text-align: center;
+}
+
+.item .ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item .ul .li {
+  width: 33.3%;
+  padding: 0.8rem;
+  box-sizing: border-box;
+}
+
+.inner {
+  background: #fff;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.inner image {
+  width: 100%;
+  height: 6rem;
+}
+
+.goodsname {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.goodsprice {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
+  color: red;
+}
