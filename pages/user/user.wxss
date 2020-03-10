@@ -1,13 +1,95 @@
 /* pages/user/user.wxss */
-.index{
-  background-color:indigo;
-  height:100vh;
+
+/* .btn-group {
+  text-align: center;
+} */
+
+.top {
+  height: 6rem;
+  background: #E98F36;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
-.btn-group{
-  padding-top:34rpx;
-  text-align:center;
+
+.top .headurl {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
 }
-.btn-pay{
-  margin-top: 50rpx;
-  margin-bottom: 50rpx;
+
+.top .title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.top .title .xing {
+  width: 1rem;
+  height: 1rem;
+}
+
+.top button {
+  min-height: 13px;
+  min-width: 50rpx;
+  font-size: 16rpx;
+  padding: 5rpx 0;
+  width: 100rpx;
+  background: #E98F36;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 100;
+  margin-top: 10rpx;
+  border-radius: 15px;
+}
+
+.conent .list {
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0 1rem;
+  height: 80rpx;
+  align-items: center;
+  background: #fff;
+  justify-content:  space-between;
+}
+
+.conent .list image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.conent .list text {
+  margin-left: 0.4rem;
+  font-size: 32rpx;
+}
+
+.conent .list2 {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0 1rem;
+  background: #fff;
+  
+}
+
+.conent .list2 .item{
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  justify-content:  space-between;
+  
+}
+
+.borderbot{
+  border-bottom: 1px solid #ddd;
+}
+
+.conent .list2 image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.conent .list2 text {
+  margin-left: 0.4rem;
+  font-size: 32rpx;
 }

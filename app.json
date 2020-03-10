@@ -8,15 +8,15 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#e7e7e7",
+    "navigationBarBackgroundColor": "#E98F36",
     "navigationBarTitleText": "无人点餐",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "backgroundColor": "#e7e7e7",
-    "borderStyle":"white",
+    "backgroundColor": "#fff",
+    "borderStyle":"black",
     "list": [{
       "pagePath": "pages/home/home",
       "text": "首页",

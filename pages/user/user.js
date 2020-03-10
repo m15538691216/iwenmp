@@ -6,13 +6,25 @@ let Api = app.Api
 
 Page({
   data: {
-    userId: store.getItem("userId")
+    userId: store.getItem("userId"),
+    avatarUrl: '',
+    nickName: '',
   },
   onLoad: function() {
     // 判断用户是否登录
     if (!this.data.userId) {
       this.getSession();
+    }  
+  },
+  onShow:function(){
+    var this_ =this;
+    if (store.getItem("user") != ''){
+      this_.setData({
+        avatarUrl: JSON.parse(store.getItem("user")).avatarUrl,
+        nickName: JSON.parse(store.getItem("user")).nickName
+      })
     }
+    
   },
   // 获取登录的code
   getSession() {
@@ -26,6 +38,8 @@ Page({
             loading: false
           }).then(res => {
             store.setItem("openId", res.openid);
+            console.log(res)
+            
           }).catch(err => {
             console.log(err.message)
           })
@@ -36,50 +50,18 @@ Page({
   getUserInfo(e) {
     let userInfo = e.detail.userInfo;
     userInfo.openid = store.getItem("openId");
-
-    /**
-     * userInfo = {
-     *   nick:"iwen",'
-     *   city:"北京",
-     *   openId:"34dfref4rer2fwdfe"
-     * }
-     * 
-     */
     app.post(Api.login, {
       'userInfo': JSON.stringify(userInfo)
     }).then(res => {
       store.setItem('userId', res.userId);
       store.setItem('user', JSON.stringify(userInfo))
       this.setData({
-        userId: res.userId
+        userId: res.userId,
+        avatarUrl: userInfo.avatarUrl,
+        nickName:userInfo.nickName
       })
     }).catch(err => {
       console.log(err)
     })
-  },
-  gotoIwenBlog() {
-    router.push({
-      path: 'iwenblog',
-      query: {
-        id: 123
-      }
-    })
-  },
-  onShareAppMessage() {
-    return {
-      title: "iwen的个人博客",
-      path: "/pages/iwenblog/iwenblog",
-      imageUrl: ""
-    }
-  },
-  chongqian(){
-    app.get(Api.list,{},{
-      loading:false
-    }).then(res => {
-      console.log(res)
-    }).catch(err =>{
-      console.log(err)
-    })
   }
-
 })

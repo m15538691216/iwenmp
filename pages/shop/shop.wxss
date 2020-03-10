@@ -41,6 +41,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   padding: 0 0.7rem;
   display: flex;
   align-items: center;
+  background: #fff;
 }
 
 .item {
@@ -84,7 +85,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   text-align: center;
   line-height: 45rpx;
   border-radius: 20rpx 0 0 20rpx;
-  border-right-width: 0rpx; 
+  border-right-width: 0rpx;
 }
 
 .item .title .count .bordright {

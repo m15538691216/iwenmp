@@ -1,11 +1,64 @@
 <!--pages/user/user.wxml-->
-<view class="index">
-  <view class="btn-group">
-    <button type="primary" style="width:80%" wx:if="{{ !userId }}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
-    <view wx:if="{{ userId }}">
-      <button class="btn" open-type="share">分享</button>
-      <button class="btn btn-primary btn-pay" bindtap="chongqian">充值</button>
-      <button class="btn" bindtap="gotoIwenBlog">iwenblog</button>
+<view>
+  <view class="top">
+    <image class="headurl" wx:if="{{ avatarUrl }}" src="{{avatarUrl}}"></image>
+    <image class="headurl" wx:else src="../../assets/images/icon-nulluser.png"></image>
+    <view class="title" wx:if="{{ avatarUrl }}">
+      <text>{{nickName}}</text>
+      <image class="xing" src="../../assets/images/icon-xing.png"></image>
+    </view>
+    <view class="title" wx:else>
+      <text style="font-size:24rpx;color:#fff;">微信用户</text>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+    </view>
+  </view>
+  <view class="conent">
+    <view class="list" style="margin:1rem 0;">
+      <view style="display:flex;">
+        <image src="../../assets/images/icon-shoucang.png"></image>
+        <text>我的收藏</text>
+      </view>
+      <image src="../../assets/images/icon-arrow.png"></image>
+    </view>
+    <view class="list2">
+      <view class="item borderbot">
+        <view style="display:flex;">
+          <image src="../../assets/images/icon-dingdan.png"></image>
+          <text>我的订单</text>
+        </view>
+        <image src="../../assets/images/icon-arrow.png"></image>
+      </view>
+      <view class="item borderbot">
+        <view style="display:flex;">
+          <image src="../../assets/images/icon-zuowei.png"></image>
+          <text>我的座位</text>
+        </view>
+        <image src="../../assets/images/icon-arrow.png"></image>
+      </view>
+      <view class="item borderbot">
+        <view style="display:flex;">
+          <image src="../../assets/images/icon-quan.png"></image>
+          <text>我的优惠券</text>
+        </view>
+        <image src="../../assets/images/icon-arrow.png"></image>
+      </view>
+      <view class="item">
+        <view style="display:flex;">
+          <image src="../../assets/images/icon-yuding.png"></image>
+          <text>我的预订</text>
+        </view>
+        <image src="../../assets/images/icon-arrow.png"></image>
+      </view>
+    </view>
+
+    <view class="list2" style="margin-top:1rem;">
+      <view class="item">
+        <view style="display:flex;">
+          <image src="../../assets/images/icon-kefu.png"></image>
+          <text>联系客服</text>
+        </view>
+        <image src="../../assets/images/icon-arrow.png"></image>
+      </view>
     </view>
   </view>
 </view>
